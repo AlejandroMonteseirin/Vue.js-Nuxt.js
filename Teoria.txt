@@ -1,0 +1,15 @@
+Comunicacion entre componentes:
+
+Relacion padre hijo (igual que angular)
+
+Eventos al padre:
+this.$emit(’name-of-the-event’, args1, args2, args3,...)
+is a way to fire the event. This is captured on the parent component using directive v-on
+
+Bus de eventos:
+You can just send the data from one component using this.$root.$emit(’name-of-emitter’, args1, args2, ...) 
+and is captured using the same name like this this.$root.$on(’name-of-emitter’, args1, args2, ...) in the other component.
+
+Provide and inyect:
+Para un padre con un hijo muy profundo.
+En el padre se hace provide y en el hijo se inyecta ese valor
